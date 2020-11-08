@@ -11,18 +11,24 @@ async function fetchNews() {
 
     resultContainer.innerHTML = "";
 
-    news.forEach(function(article){
-        resultContainer.innerHTML += `<a href="details.html?id=${article.id}">
-                    <div class="sectionName"><strong>${article.sectionName}</strong> <span class="publicationDate">Published: ${article.webPublicationDate}</span></div>         
-                    <h2 class="title">${article.webTitle}</h2>
-                    <div class="columnContainer">
-                        <img class="image" src="${article.fields.thumbnail}"</img>
-                        <div class="trailText">${article.fields.trailText}</div>
-                    </div>
-                    <div class="standfirst">${article.fields.standfirst}</div>
-                    </a>`;
+    for (let i= 0; i < news.length; i++) {
 
-    });
+        if(!news[i].fields.thumbnail){
+            continue;
+        }
+
+
+        resultContainer.innerHTML += `<a href="details.html?id=${news[i].id}">
+        <div class="sectionName"><strong>${news[i].sectionName}</strong> <span class="publicationDate">Published: ${news[i].webPublicationDate}</span></div>         
+        <h2 class="title">${news[i].webTitle}</h2>
+        <div class="columnContainer">
+            <img class="image" src="${news[i].fields.thumbnail}"</img>
+            <div class="trailText">${news[i].fields.trailText}</div>
+        </div>
+        <div class="standfirst">${news[i].fields.standfirst}</div>
+        </a>`;
+    }
+
 
 
 } catch (error) {
