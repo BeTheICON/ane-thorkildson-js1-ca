@@ -21,25 +21,25 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <section class="headerContentWrap"> 
+        <section class="headerContentWrap">
             <div class="headerTopBarFlexboxWrap">
-                <div class="headerTopBarLeft">
-                   <div id="shippingDeliveryLink">
-                       <a href="shipping-delivery.html"><span><i class="fas fa-shipping-fast" aria-hidden="true"></i></span>Free Express Shipping<br>Worldwide<span><i class="fas fa-plane" aria-hidden="true"></i></span></a>
-                   </div>
-                   <div id="returnsLink">
-                        <a href="returns.html">Free Returns 100 Days</a>
-                    </div>
-                </div>
                 <div class="headerTopBarRight">
                     <nav id="topNavBar">
                         <ul class="topNavBarMenuInner">
-                            <li><a href="shoepedia-faqs.html"><span><i class="fas fa-question" aria-hidden="true"></i></span>Shoepedia-FAQs</a></li>
-                            <li><a href="about-us.html">About</a></li>
-                            <li><a href="contact.html"><span><i class="fas fa-headset" aria-hidden="true"></i></span>Contact Us</a></li>
-                            <li><a href="log-in.html"><span><i class="fas fa-user" aria-hidden="true"></i></span>Log in&#47;Register</a></li>
+                            <a href="shoepedia-faqs.html"><li><span><i class="fas fa-question" aria-hidden="true"></i></span>Shoepedia-FAQs</li></a>
+                            <a href="about-us.html"><li>About</li></a>
+                            <a href="contact.html"> <li><span><i class="fas fa-headset" aria-hidden="true"></i></span>Contact Us</li></a>
+                            <a href="log-in.html"><li><span><i class="fas fa-user" aria-hidden="true"></i></span>Log in&#47;Register</li></a>
                         </ul>
                     </nav>
+                </div>
+                <div class="headerTopBarLeft">
+                    <div id="shippingDeliveryLink">
+                        <a href="shipping-delivery.html"><span><i class="fas fa-shipping-fast" aria-hidden="true"></i></span>Free Express Shipping<br>Worldwide<span><i class="fas fa-plane" aria-hidden="true"></i></span></a>
+                    </div>
+                    <div id="returnsLink">
+                        <a href="returns.html">Free Returns<br>100 Days</a>
+                    </div>
                 </div>
             </div>
              <!--nav header toggle menu button-->
@@ -70,8 +70,17 @@
                 <h4 class="logo">Letha</h4>
                 <h2 id="logoText">Men's Shoes</h2>
             </div>
+            <nav id="productCategoryNav">
+                <ul class="categoryNavInner">
+                    <li><a class="currentPage" href="index.html">Home</a></li>
+                    <li><a href="product-category-shoes.html">Shoes</a></li>
+                    <li><a href="product-category-boots.html">Boots</a></li>
+                    <li><a href="product-category-sneakers-trainers.html">Sneakers &amp; Trainers</a></li>
+                    <li><a href="product-category-sandals.html">Sandals</a></li>
+                </ul>
+            </nav>
             <div class="headerTitleBar">
-                <a href="sustainability-materials.html"><h1 id="titleBar">Sustainable &amp; Handmade - Men's Leather Shoes &amp; Boots &hyphen; <span class="readMore">Read more&#62;</span></h1></a>
+                <h1 id="titleBar">Sustainable &amp; Handmade<br>Men's Leather Shoes &amp; Boots</h1>
             </div>
         </section>
         <!--Header-End-->
@@ -89,7 +98,7 @@
             <section class="bottomSectionWrap">
                 <div class=latestArrivalsVideoContainer>
                     <h2 id="videoNewIn" class="latestArrivalsHeader">Latest Arrivals</h2>
-                    <video width="100%" controls frameborder="0" allowfullscreen>
+                    <video width="100%" controls frameborder="0" allowfullscreen autoplay>
                         <source src="video/letha mens shoes_new-in_960x720.mp4" type="video/mp4">
                         Oh, no! So sorry, but it seems your browser cannot play this video.
                     </video>
