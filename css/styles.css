@@ -56,6 +56,7 @@ main {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0;
+	text-align: center;
 }
 
 h2,
@@ -108,7 +109,8 @@ h5 {
 .sidebarMenuInner li a:active,
 .currentPage,
 .productCategoryMenu li a:hover,
-.standardButtonInverted:hover {
+.standardButtonInverted:hover,
+.back a:hover {
 	background-color: #01186b;
 	background-image: linear-gradient(
 		225deg,
@@ -185,20 +187,23 @@ i.fas.fa-plane {
 	align-items: center;
 	padding-left: 0;
 }
-.productCategoryMenu li a:hover {
+.productCategoryMenu li a:hover,
+.back a:hover {
 	padding: 0.5rem;
 	cursor: pointer;
 	color: #fcfcfc;
 	text-decoration: none;
 }
-.productCategoryMenu li a:active {
+.productCategoryMenu li a:active,
+.back a:active {
 	text-decoration: underline;
 }
 
 #topNavBar ul {
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	padding: 0.5rem 0;
+	font-size: 0.9rem;
 }
 .topNavBarMenuInner li,
 .productCategoryMenu {
@@ -212,8 +217,6 @@ i.fas.fa-plane {
 	text-align: center;
 }
 
-.back a h5:hover,
-.back a h5:active,
 .headerTopBarLeft a:hover,
 .headerTopBarLeft a:active {
 	font-size: 0.9rem;
@@ -222,8 +225,6 @@ i.fas.fa-plane {
 
 .competitionTextContainer a:hover,
 .competitionTextContainer a:active,
-.back a h5:hover,
-.back a h5:active,
 .topNavBarMenuInner li:hover {
 	color: rgba(0, 13, 64, 1);
 }
@@ -275,24 +276,45 @@ i.fas.fa-plane {
 	line-height: 1.6rem;
 }
 
-.productCategoryItemsResults {
+.productCategoryItemsContainer {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap-reverse;
-	margin: 0 auto;
-	padding: 1rem;
-	align-items: baseline;
-	justify-content: center;
+	margin: 2rem auto 4rem;
+	text-align: left;
 }
-.singleResult {
-	width: 25%;
-	min-width: 300px;
+.productCategoryItemsResults {
+	width: 90%;
 	display: flex;
-	flex-direction: column;
-	margin: 0;
+	flex-flow: row wrap;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: left;
+}
+
+.singleResultFlexContainer {
+	width: 45%;
+	max-width: 350px;
+	min-width: 280px;
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 1rem auto 2rem;
 	padding: 0.5rem;
-	align-items: baseline;
-	justify-content: center;
+	justify-content: left;
+	text-align: left;
+}
+
+.categoryImage {
+	width: 100%;
+	min-height: 200px;
+}
+.availableSizes {
+	padding-top: 1.5rem;
+}
+
+.add-to-cart-button .standardButton,
+.view-more-button .standardButtonInverted {
+	margin: 0.5rem auto;
+	padding: 0;
 }
 
 .singleResultProduct {
@@ -323,6 +345,7 @@ i.fas.fa-plane {
 	height: auto;
 	margin: 1rem auto;
 	position: relative;
+	max-width: 600px;
 }
 
 .firstItemContainer img,
@@ -384,13 +407,22 @@ i.fas.fa-plane {
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
+	position: relative;
 }
 .competitionTextContainer {
 	background: rgba(1, 24, 107, 0.4);
 	padding: 2rem 4rem;
 }
+
+#competitionHeader {
+	font-size: 3.5rem;
+	position: absolute;
+	top: 1rem;
+	text-decoration: underline;
+	color: rgba(252, 252, 252, 1);
+	text-shadow: 3px 3px 6px rgba(0, 13, 64, 1);
+}
 .competitionTextContainer h3,
-.competitionTextContainer h2,
 .competitionTextContainer h5,
 .competitionTextContainer a {
 	color: rgba(252, 252, 252, 1);
@@ -516,10 +548,11 @@ textarea:valid {
 	text-shadow: 0.2px 0.2px 0.2px rgba(227, 227, 227, 0.8);
 }
 
-.back a h5 {
-	margin-top: 3rem;
-	text-decoration: underline;
+.container .back {
+	text-align: left;
+	padding-left: 1rem;
 }
+
 .form-note {
 	font-size: 0.8rem;
 	color: rgb(146, 17, 17);
@@ -749,17 +782,19 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 	html {
 		font-size: 13px;
 	}
+
+	.headerTopBarLeft {
+		width: 100%;
+	}
+	.productCategoryMenu {
+		display: none;
+	}
+	.sidebarIconToggle {
+		top: 11rem;
+	}
 }
 
 @media only screen and (min-width: 600px) {
-	.headerTopBarFlexboxWrap {
-		width: 100%;
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		text-align: center;
-	}
-
 	.headerHamburgerMenu {
 		display: none;
 	}
@@ -767,20 +802,48 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 @media only screen and (min-width: 800px) {
 	html {
-		font-size: 17px;
+		font-size: 16px;
 	}
 
-	.productCategoryFlexContainer {
-		justify-content: space-evenly;
+	.headerTopBarFlexboxWrap {
+		width: 100%;
+		display: flex;
+		flex-flow: row-reverse nowrap;
+		justify-content: space-between;
 		align-items: center;
+		text-align: center;
+	}
+	.headerTopBarLeft {
+		width: 40%;
+		margin: 0;
+		padding-top: 0.5rem;
+	}
+	#shippingDeliveryLink,
+	#returnsLink {
+		padding-right: 0.5rem;
+	}
+	.headerTopBarRight {
+		width: 60%;
+		text-align: left;
+	}
+	#topNavBar ul {
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.25rem;
+	}
+
+	.productCategoryMenu {
+		font-size: 1.2rem;
 	}
 
 	.firstItemContainer,
 	.secondItemContainer,
 	.thirdItemContainer,
 	.fourthItemContainer {
-		width: 40%;
+		width: 45%;
+		margin: 0.3rem;
 	}
+
 	.bottomSectionWrap {
 		width: 95%;
 	}
