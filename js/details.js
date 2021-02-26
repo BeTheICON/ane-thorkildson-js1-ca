@@ -433,27 +433,54 @@ const products = [
 ];
 
 
-
+const productTitle = document.querySelector(".productTitle")
 const productDetailsResultContainer = document.querySelector(".productDetailsResultContainer");
-const productDetailsName = document.querySelector(".productDetailsName");
 const queryString = document.location.search;
 console.log(queryString);
 const params = new URLSearchParams(queryString);
 console.log(params);
-const name = params.get("name");
-console.log(name);
+const productName = params.get("name");
+console.log(productName);
 
 
-const url = "http://127.0.0.1:5500/product-category-shoes.html?name=" + name;
 
-function getProductDetails(){
-        console.log();
+
+function getProduct(){
+console.log(productName);
+
+productDetailsResultContainer.innerHTML="";
+
+for (let i = 0; i < products.length; i++) {
+    console.log(products[i]);
+
+if(productName === products[i].name){
+
+    productDetailsResultContainer.innerHTML+= `<div class="product-details-flexbox">
+    <h1>${products[i].name}<h1/>
+    <img class="categoryImage" src="${products[i].imageUrlMain}" alt="image of shoes">
+    <div class="galleryflexbox">
+        <img class="galleryImage" src="${products[i].imageUrl2}" alt="image of shoes">
+        <img class="galleryImage" src="${products[i].imageUrl3}" alt="image of shoes">
+        <img class="galleryImage" src="${products[i].imageUrl4}" alt="image of shoes">
+        <img class="galleryImage" src="${products[i].imageUrl5}" alt="image of shoes">
+        <img class="galleryImage" src="${products[i].imageUrl6}" alt="image of shoes">
+    </div>
+    <div class="model">Model&#58; ${products[i].name}</div>
+    <h5>Price&#58; ${products[i].price}</h5>
+    <div class="product-description">Description&#58; ${products[i].description}</div>
+    <div class="availableSizes">Sizes&#58; ${products[i].sizes}</div>
+    <div class="add-to-cart-button">
+        <button type="submit" class="standardButton">Add to cart</button>
+    </div>
+    </div>
+    `;
+}
+}
 
 }
-getProductDetails();
 
 
-
+getProduct();
 
 
 
