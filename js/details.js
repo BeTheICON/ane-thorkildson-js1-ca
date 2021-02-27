@@ -445,6 +445,8 @@ console.log(productName);
 
 
 
+
+
 function getProduct(){
 console.log(productName);
 
@@ -455,39 +457,52 @@ for (let i = 0; i < products.length; i++) {
 
 if(productName === products[i].name){
 
-    productDetailsResultContainer.innerHTML+= `<div class="product-details-flexbox">
-    <h1>${products[i].name}<h1/>
-    <img class="categoryImage" src="${products[i].imageUrlMain}" alt="image of shoes">
-    <div class="galleryflexbox">
-        <img class="galleryImage" src="${products[i].imageUrl2}" alt="image of shoes">
-        <img class="galleryImage" src="${products[i].imageUrl3}" alt="image of shoes">
-        <img class="galleryImage" src="${products[i].imageUrl4}" alt="image of shoes">
-        <img class="galleryImage" src="${products[i].imageUrl5}" alt="image of shoes">
-        <img class="galleryImage" src="${products[i].imageUrl6}" alt="image of shoes">
-    </div>
-    <div class="model">Model&#58; ${products[i].name}</div>
-    <h5>Price&#58; ${products[i].price}</h5>
-    <div class="product-description">Description&#58; ${products[i].description}</div>
-    <div class="availableSizes">Sizes&#58; ${products[i].sizes}</div>
-    <div class="add-to-cart-button">
-        <button type="submit" class="standardButton">Add to cart</button>
-    </div>
+    productDetailsResultContainer.innerHTML+= ` <h2>${products[i].name}</h2>
+    <div class="product-details-flexbox">
+        <div class="product-image-container">
+            <div class="mainImage">
+                <img class="product-main-image" src="${products[i].imageUrlMain}" alt="image of shoes">
+            </div>
+            <div class="galleryflexbox">
+                <img class="galleryImage" src="${products[i].imageUrl2}" alt="image of shoes">
+                <img class="galleryImage" src="${products[i].imageUrl3}" alt="image of shoes">
+                <img class="galleryImage" src="${products[i].imageUrl4}" alt="image of shoes">
+            </div>
+        </div>
+        <div class="product-description-flexbox">
+            <h4 class="model">Model&#58; ${products[i].name}</h4>
+            <h5>Price&#58; ${products[i].price}</h5>
+            <div class="product-description">Description&#58; <br> ${products[i].description}</div>
+            <div class="availableSizes">Choose your size&#58; ${products[i].sizes}</div>
+            <div class="add-to-cart-button">
+                <button type="submit" class="standardButton">Add to cart</button>
+            </div>
+            <div class="starRatingContainer">
+                <h4 id="starRatingTitle">Customers rate this product&colon;</h4>
+                <div class="starRating">
+                    <input type="radio" id="5-stars" name="rating" value="5" />
+                        <label for="5-stars" class="star">&#9733;</label>
+                    <input type="radio" id="4-stars" name="rating" value="4" />
+                        <label for="4-stars" class="star">&#9733;</label>
+                    <input type="radio" id="3-stars" name="rating" value="3" />
+                        <label for="3-stars" class="star">&#9733;</label>
+                    <input type="radio" id="2-stars" name="rating" value="2" />
+                        <label for="2-stars" class="star">&#9733;</label>
+                    <input type="radio" id="1-star" name="rating" value="1" />
+                        <label for="1-star" class="star">&#9733;</label>
+                </div>
+             </div>
+        </div>
     </div>
     `;
 }
+
 }
 
 }
 
 
 getProduct();
-
-
-
-
-
-
-
 
 
 

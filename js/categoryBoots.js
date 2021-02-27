@@ -407,85 +407,20 @@ const products = [
     if(products[i].category === "boots"){
 
         productCategoryItemsResults.innerHTML += `<a href="product-details.html?name=${products[i].name}" class="singleResult">
-        <img class="categoryImage" src="${products[i].imageUrlMain}" alt="image of shoes">
-        <h4>${products[i].name}</h4>
-        <h5><strong>Price&colon; ${products[i].price}</strong></h5>
-        <!--<div class="availableSizes">${products[i].sizes}</div>-->
-        </a>`;
+                                                    <div class="singleResultFlexContainer">
+                                                        <img class="categoryImage" src="${products[i].imageUrlMain}" alt="image of shoes">
+                                                        <h4>${products[i].name}</h4>
+                                                        <div class="view-more-button">
+                                                            <a href="product-details.html?name=${products[i].name}">
+                                                            <button type="submit" class="standardButtonInverted"><span><i class="far fa-eye" aria-hidden="true"></i></span> View More</button>
+                                                            </a>
+                                                        </div>
+                                                        <div class="availableSizes">Sizes&#58; ${products[i].sizes}</div>
+                                                        <h5>Price&colon; ${products[i].price}</h5>
+                                                        <div class="add-to-cart-button">
+                                                            <button type="submit" class="standardButton">Add to cart</button>
+                                                        </div>
+                                                    </div>
+                                                </a>`;
     }
 }
-
-
-
-    /*
-  function createHTML(singleProduct) {
-    productDetailsResultContainer.innerHTML = `<div class="sectionName"><strong>${singleArticle.sectionName}</strong> <span class="publicationDate">Published: ${singleArticle.webPublicationDate}</span></div>
-            <h2 class="title">${singleArticle.webTitle}</h2>
-            <div class="columnContainer">
-                <div class="columnLeft">
-                    <img class="image" src="${singleArticle.fields.thumbnail}"</img>
-                    <div class="standfirst">${singleArticle.fields.standfirst}</div>
-                </div>
-                <div class="columnRight">
-                    <div class="trailText">${singleArticle.fields.trailText}</div>
-                </div>
-            </div>
-            <div class="byline">by: ${singleArticle.fields.byline}</div>
-            <div class="bodyText">${singleArticle.fields.bodyText}</div>`;
-        }
-
-    createHTML(singleProduct);
-    document.title = `${singleProduct.name}`;
-    productModelName.innerHTML = `<span class="productDetailsName">${singleProduct.name}</span>`;
-
-*/
-
-/*
-} catch (error) {
-    console.log("error occured");
-    resultContainer.innerHTML = errorMessage();
-}
-}
-fetchShoeCategories(); */
-
-
-/*const resultContainer = document.querySelector(".articleResults");
-const url = "https://content.guardianapis.com/search?api-key=05659103-6f5c-43fc-a0aa-2043d1245235&show-fields=all";
-
-
-async function fetchNews() {
-    try {
-    const response = await fetch(url);
-    const json = await response.json();
-    console.log(json);
-    const news = json.response.results;
-    console.log(news);
-
-    resultContainer.innerHTML = "";
-
-    for (let i= 0; i < news.length; i++) {
-
-        if(!news[i].fields.thumbnail){
-            continue;
-        }
-
-
-        resultContainer.innerHTML += `<a href="details.html?id=${news[i].id}">
-        <div class="sectionName"><strong>${news[i].sectionName}</strong> <span class="publicationDate">Published: ${news[i].webPublicationDate}</span></div>         
-        <h2 class="title">${news[i].webTitle}</h2>
-        <div class="columnContainer">
-            <img class="image" src="${news[i].fields.thumbnail}"</img>
-            <div class="trailText">${news[i].fields.trailText}</div>
-        </div>
-        <div class="standfirst">${news[i].fields.standfirst}</div>
-        </a>`;
-    }
-
-
-
-} catch (error) {
-    console.log("error occured");
-    resultContainer.innerHTML = errorMessage();
-}
-}
-fetchNews(); */
