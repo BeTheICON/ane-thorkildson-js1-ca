@@ -182,6 +182,7 @@ i {
 
 .headerContentWrap {
 	width: 100%;
+	position: relative;
 }
 
 .headerTopBarLeft {
@@ -279,12 +280,12 @@ i.fas.fa-plane {
 	text-align: center;
 	color: #01186b;
 	width: 100%;
-	position: relative;
+	margin: 1rem auto 2rem;
 }
 
 #shoppingCart {
 	position: absolute;
-	top: -4rem;
+	top: 12rem;
 	right: 2rem;
 	border: 2px solid rgba(0, 13, 64, 1);
 	border-radius: 4px;
@@ -305,7 +306,7 @@ i.fas.fa-plane {
 }
 
 #logoText {
-	margin-bottom: 2rem;
+	margin-bottom: 5rem;
 }
 
 .headerTitleBar {
@@ -552,7 +553,7 @@ textarea:valid {
 	border: 2px solid rgba(0, 13, 64, 1);
 	border-radius: 4px;
 	padding: 1rem 1.5rem;
-	width: 40%;
+	width: 100%;
 	min-width: 240px;
 	text-align: center;
 	margin: 0 auto;
@@ -659,11 +660,12 @@ textarea:valid {
 .container .back {
 	text-align: left;
 	padding: 0.5rem;
-	max-width: 200px;
+	max-width: 260px;
 	border: 2px solid rgba(0, 13, 64, 1);
 	border-radius: 4px;
 	margin: 2rem 1rem 4rem;
 	text-decoration: underline;
+	font-size: 0.9rem;
 }
 
 .form-note {
@@ -768,7 +770,7 @@ label {
 /*HamburgerMenuStyles*/
 
 #sidebarMenu {
-	height: 70%;
+	height: 100%;
 	position: absolute;
 	left: 0;
 	width: 200px;
@@ -793,8 +795,6 @@ label {
 
 .sidebarMenuInner li a {
 	color: rgba(252, 252, 252, 1);
-	font-weight: 500;
-	text-transform: uppercase;
 	cursor: pointer;
 	text-decoration: none;
 }
@@ -826,13 +826,13 @@ input[type="checkbox"] {
 	box-sizing: border-box;
 	cursor: pointer;
 	position: absolute;
-	z-index: 99;
+	z-index: 1001;
 	height: 100%;
 	width: 100%;
 	top: 10rem;
 	left: 1rem;
-	height: 44px;
-	width: 44px;
+	height: 40px;
+	width: 40px;
 }
 
 .spinner {
@@ -902,8 +902,19 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 	.productCategoryMenu {
 		display: none;
 	}
+	#shoppingCart {
+		top: 14rem;
+		right: 1rem;
+	}
 	.sidebarIconToggle {
-		top: 11rem;
+		top: 14rem;
+
+		height: 33px;
+		width: 33px;
+	}
+
+	.logoWrap {
+		margin-top: 10rem;
 	}
 }
 
