@@ -457,7 +457,7 @@ for (let i = 0; i < products.length; i++) {
 
 if(productName === products[i].name){
 
-    productDetailsResultContainer.innerHTML+= ` <h2>${products[i].name}</h2>
+    productDetailsResultContainer.innerHTML+= ` <h1>${products[i].name}</h1>
     <div class="product-details-flexbox">
         <div class="product-image-container">
             <div class="mainImage">

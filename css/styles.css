@@ -74,7 +74,8 @@ h4 {
 	margin-bottom: 2.5rem;
 }
 
-h1 {
+h1,
+#titleBar {
 	font-size: 2rem;
 	color: rgba(252, 252, 252, 1);
 }
@@ -97,7 +98,7 @@ h5 {
 }
 
 .currentPage,
-.standardButtonInverted:hover,
+,
 .standardButton {
 	font-weight: 500;
 	color: rgba(252, 252, 252, 1);
@@ -157,19 +158,22 @@ h5 {
 }
 
 a,
-.headerTopBarLeft a {
+.headerTopBarLeft a,
+.titleContactForm {
 	text-decoration: none;
 	color: rgba(0, 13, 64, 1);
 }
 
 #topNavBar ul a:hover,
-.standardButton:hover {
+.standardButton:hover,
+.standardButtonInverted:hover {
 	text-decoration: underline;
 	color: rgba(0, 13, 64, 1);
 	text-shadow: 0.2px 0.2px 0.5px rgba(227, 227, 227, 0.5);
 }
 
-.standardButton:hover {
+.standardButton:hover,
+.standardButtonInverted:hover {
 	background: #c9fccf;
 	border: 1px solid rgba(0, 13, 64, 1);
 }
@@ -530,9 +534,10 @@ textarea {
 
 #comment {
 	display: block;
-	margin-bottom: 10px;
-	width: 36rem;
-	height: 20rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	max-width: 400px;
+	height: 200px;
 }
 
 textarea:invalid,
@@ -547,6 +552,13 @@ textarea:valid {
 	border: 2px solid rgba(0, 13, 64, 1);
 }
 
+#contactForm {
+	margin: 2rem auto 10rem;
+	max-width: 760px;
+}
+.titleContactForm {
+	margin: 2rem auto 3rem;
+}
 /*StarRating Styles*/
 
 .starRatingContainer {
@@ -653,7 +665,8 @@ textarea:valid {
 
 .note {
 	padding: 1rem 0 0.5rem;
-	color: rgba(0, 13, 64, 1);
+	color: #c9fccf;
+	font-size: 0.8rem;
 	text-shadow: 0.2px 0.2px 0.2px rgba(227, 227, 227, 0.8);
 }
 
@@ -670,34 +683,41 @@ textarea:valid {
 
 .form-note {
 	font-size: 0.8rem;
-	color: rgb(146, 17, 17);
+	color: rgba(252, 252, 252, 1);
+	text-shadow: 2px 2px 4px rgb(146, 17, 17);
 }
 
 .formContainer {
 	max-width: 760px;
 	margin: 0 auto;
+	text-align: center;
 }
 
 form {
 	padding: 2em;
 	background: white;
 	border-radius: 1rem;
+	text-align: left;
 }
 
 input {
 	width: 100%;
-	margin-top: 2px;
-	padding: 10px;
+	margin-top: 0.5rem;
+	padding: 1rem;
+	border-radius: 4px;
 }
 
 label {
 	display: block;
-	margin-top: 1rem;
+	margin-top: 0.5rem;
+	color: rgba(252, 252, 252, 1);
+	text-shadow: 0.2px 0.2px 0.2px rgba(227, 227, 227, 0.8);
 }
 .form-error {
 	display: none;
-	color: rgb(233, 4, 4);
-	font-size: 0.8rem;
+	color: rgba(252, 252, 252, 1);
+	text-shadow: 2px 2px 4px rgb(146, 17, 17);
+	font-size: 0.9rem;
 }
 
 .errorMessage,

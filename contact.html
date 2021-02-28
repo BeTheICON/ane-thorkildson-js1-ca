@@ -20,25 +20,25 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <section class="headerContentWrap"> 
+        <section class="headerContentWrap">
             <div class="headerTopBarFlexboxWrap">
-                <div class="headerTopBarLeft">
-                   <div id="shippingDeliveryLink">
-                       <a href="shipping-delivery.html"><span><i class="fas fa-shipping-fast" aria-hidden="true"></i></span>Free Express Shipping<br>Worldwide<span><i class="fas fa-plane" aria-hidden="true"></i></span></a>
-                   </div>
-                   <div id="returnsLink">
-                        <a href="returns.html">Free Returns 100 Days</a>
-                    </div>
-                </div>
                 <div class="headerTopBarRight">
                     <nav id="topNavBar">
                         <ul class="topNavBarMenuInner">
-                            <li><a href="shoepedia-faqs.html"><span><i class="fas fa-question" aria-hidden="true"></i></span>Shoepedia-FAQs</a></li>
-                            <li><a href="about-us.html">About</a></li>
-                            <li><a href="contact.html"><span><i class="fas fa-headset" aria-hidden="true"></i></span>Contact Us</a></li>
-                            <li><a href="log-in.html"><span><i class="fas fa-user" aria-hidden="true"></i></span>Log in&#47;Register</a></li>
+                            <a href="shoepedia-faqs.html"><li><span><i class="fas fa-question" aria-hidden="true"></i></span>Shoepedia-FAQs</li></a>
+                            <a href="about-us.html"><li>About</li></a>
+                            <a href="contact.html"> <li><span><i class="fas fa-headset" aria-hidden="true"></i></span>Contact Us</li></a>
+                            <a href="log-in.html"><li><span><i class="fas fa-user" aria-hidden="true"></i></span>Log in&#47;Register</li></a>
                         </ul>
                     </nav>
+                </div>
+                <div class="headerTopBarLeft">
+                    <div id="shippingDeliveryLink">
+                        <a href="shipping-delivery.html"><span><i class="fas fa-shipping-fast" aria-hidden="true"></i></span>Free Express Shipping<br>Worldwide<span><i class="fas fa-plane" aria-hidden="true"></i></span></a>
+                    </div>
+                    <div id="returnsLink">
+                        <a href="returns.html">Free Returns<br>100 Days</a>
+                    </div>
                 </div>
             </div>
              <!--nav header toggle menu button-->
@@ -52,10 +52,11 @@
             <div id="sidebarMenu">
                 <ul class="sidebarMenuInner">
                     <li><a href="#newIn">Latest Arrivals</a></li>
-                    <li><a href="#categoryShoes">Shoes</a></li>
-                    <li><a href="#categoryBoots">Boots</a></li>
-                    <li><a href="#categorySneakersTrainers">Sneakers &amp; Trainers</a></li>
-                    <li><a href="#categorySandals">Sandals</a></li>
+                    <li><a class="currentPage" href="index.html">Home</a></li>
+                    <li><a href="product-category-shoes.html">Shoes</a></li>
+                    <li><a href="product-category-boots.html">Boots</a></li>
+                    <li><a href="product-category-sneakers-trainers.html">Sneakers &amp; Trainers</a></li>
+                    <li><a href="product-category-sandals.html">Sandals</a></li>
                     <li><a href="#sizeGuide">Size Guide</a></li>
                     <li><a href="shoepedia-faqs.html">Shoepedia-FAQs</a></li>
                     <li><a href="shipping-delivery.html">Shipping &amp; Delivery</a></li>
@@ -66,18 +67,26 @@
             </div>
             </div>
             <div class="logoWrap">
+                <h2 id="shoppingCart"><span><a href="#shoppingCart"><i class="fas fa-shopping-cart" aria-label="hidden"></i>Cart</a></span></h2>
                 <h4 class="logo">Letha</h4>
                 <h2 id="logoText">Men's Shoes</h2>
             </div>
+            <nav id="productCategoryNav">
+                <ul class="productCategoryMenu">
+                    <li><a class="currentPage" href="index.html">Home</a></li>
+                    <li><a href="product-category-shoes.html">Shoes</a></li>
+                    <li><a href="product-category-boots.html">Boots</a></li>
+                    <li><a href="product-category-sneakers-trainers.html">Sneakers &amp; Trainers</a></li>
+                    <li><a href="product-category-sandals.html">Sandals</a></li>
+                </ul>
+            </nav>
             <div class="headerTitleBar">
-                <a href="sustainability-materials.html"><h1 id="titleBar">Sustainable &amp; Handmade - Men's Leather Shoes &amp; Boots &hyphen; <span class="readMore">Read more&#62;</span></h1></a>
+                <div id="titleBar">Sustainable &amp; Handmade Men's Leather Shoes &amp; Boots</div>
             </div>
         </section>
-        <!--Header-End-->
-    <body>
-        <main class="formContainer">
+        <main class="container">
             <div class="back">
-                <a href="index.html"><h5><< Back to mainpage</h5></a>
+                <a href="index.html"><< Back to mainpage</a>
             </div>
             <h1 class="titleContactForm">Contact Form</h1>
             <div id="successMessage"></div>
@@ -117,14 +126,24 @@
                             </textarea>
                     </div>
                 </div>
-                <button class="standardButton">Send contact form</button>
+                <button class="standardButtonInverted">Send contact form</button>
             </form>
         </main>
-        <!-- TrustBox widget - Micro Review Count -->
-<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="5fc879558f14430001f4ac56" data-style-height="24px" data-style-width="100%" data-theme="light">
-    <a href="https://www.trustpilot.com/review/betheicon.no" target="_blank" rel="noopener">Trustpilot</a>
-  </div>
-  <!-- End TrustBox widget -->
+        <footer class="footerContainer">
+            <!-- TrustBox widget - Review Collector -->
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="5fc879558f14430001f4ac56" data-style-height="52px" data-style-width="100%">
+            <a href="https://www.trustpilot.com/review/betheicon.no" target="_blank" rel="noopener">Trustpilot</a>
+          </div>
+           <!-- End TrustBox widget -->
+          <div class="backToTopButton">
+            <a href="#top">
+                <button class="standardButtonInverted" type="button">Back to top &#62;</button>
+            </a>
+        </div>
+         <section class="copyrightText">
+            <h5 id="copyright">Copyright &copy; 2020 Letha Ltd. All rights reserved.</h5>
+        </section>
+        </footer>
         <script src="js/contact.js"></script>
     </body>
 </html>
